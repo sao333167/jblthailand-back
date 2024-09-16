@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.frm_info {
+    @apply py-[10px] text-[12px] font-normal text-center;
+}
+.frm_grp:first-child {
+    @apply border-t border-gray-600;
+}
+.frm_grp {
+    @apply flex items-center  py-[10px] px-[15px];
+}
+.frm_grp .frm_col {
+    @apply w-full;
+}
+.frm_grp label {
+    @apply inline-block align-middle w-[200px] text-[14px];
+}
+.frm_grp label .icon svg {
+    @apply w-[20px] h-[20px];
+}
+.frm_grp input {
+    @apply border border-gray-600 bg-inherit px-4 rounded-md  w-full h-[30px] text-[14px] font-normal text-[#333] focus:outline-none placeholder:text-[14px] placeholder:text-[#666];
+}
+.frm_grp select {
+    @apply border border-gray-600 bg-inherit px-4 rounded-md  w-full h-[30px] text-[14px] font-normal text-[#333] focus:outline-none placeholder:text-[14px] placeholder:text-[#666];
+}
+.frm_grp textarea {
+    @apply border border-gray-600 bg-inherit px-4 rounded-md  w-full h-[60px] text-[14px] font-normal text-[#333] focus:outline-none placeholder:text-[14px] placeholder:text-[#666];
+}
+
+.frm_grp .frm_ic_grp {
+    @apply relative w-full;
+}
+.frm_grp .frm_ic_grp input {
+    @apply pr-[30px];
+}
+.frm_grp .frm_ic_grp .input_text {
+    @apply block absolute top-[8px] right-[6px];
+}
+.frm_grp .frm_ic_grp .ic_baht {
+    @apply after:content-['฿'] after:block;
+}
+.frm_wrap .frm_grp .msg_error {
+    @apply block w-full py-[4px] text-[12px] text-red-500 italic;
+}
+.frm_wrap .frm_grp.required > label:not(:empty) {
+    @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+}
+
+.frm_upload_wrap {
+    @apply bg-white py-[10px] px-[15px];
+}
+.file_input {
+    @apply block relative my-0 mx-auto;
+}
+.file_input .btn_upload {
+    @apply absolute top-[50%] left-[50%] z-[2] w-[60px] h-[60px] -mt-[30px] -ml-[30px];
+}
+.file_input .txt_wrap {
+    @apply absolute top-[74%] left-[50%] -ml-[81px] py-[0] px-[9px] text-[11px] text-white text-center leading-[28px] opacity-50 w-[162px] rounded-[4px] bg-[#9cf];
+}
+.frm_upload_wrap input {
+    @apply absolute top-[50%] left-[50%] z-[4] max-w-[60px] w-[60px] h-[60px] -mt-[30px] -ml-[30px] opacity-0;
+}
+
+.btn_wrap {
+    @apply flex;
+}
+.btn_wrap .btn {
+    @apply flex justify-end mx-4 px-4 text-white text-xs uppercase text-center py-1 bg-gradient-to-r from-blue-500 to-blue-900 rounded;
+}
+.error-sms {
+    @apply flex justify-end mr-14 text-[12px] -mt-3;
+}
